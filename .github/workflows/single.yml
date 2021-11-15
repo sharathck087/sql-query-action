@@ -2,7 +2,7 @@ on: [push]
 
 jobs:
   test-everywhere:
-    name: Test Action on all platforms
+    name: Test Action
     runs-on: ubuntu-latest
 
     steps:
