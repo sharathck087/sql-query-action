@@ -17,7 +17,7 @@ jobs:
       #- name: Run sqlclient
       #- uses: sharathck087/sqlserver-github-action@v1.0.1
         #with:
-          #install: sqlengine, sqlclient
+          #install: sqlengine, sqlclient 
 
       - name: Run sqlclient
         run: sqlcmd -S ${{secrets.SERVER}} -U ${{secrets.USERNAME}} -P ${{secrets.PASSWORD}} -i /${GITHUB_WORKSPACE}/sql/test.sql
