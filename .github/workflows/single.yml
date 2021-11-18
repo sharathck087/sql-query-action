@@ -5,6 +5,7 @@ env:
 jobs:
   test-everywhere:
     name: Test Action
+    if: ${{ env.DB_TYPE == 'mysql' }}
     runs-on: ubuntu-latest
 
     steps:
