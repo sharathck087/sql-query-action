@@ -26,8 +26,6 @@ jobs:
         run: sqlcmd -S ${{secrets.SERVER}} -U ${{secrets.USERNAME}} -P ${{secrets.PASSWORD}} -i /${GITHUB_WORKSPACE}/sql/*.sql
         #run: sqlcmd -S localhost -U sa -P dbatools.I0 -i /${GITHUB_WORKSPACE}/sql/test.sql
         # run: sqlcmd -S localhost -U sa -P dbatools.I0 -d tempdb -Q "SELECT @@version;"
-		
-		
 
   build:
     if: ${{ env.DB_TYPE == 'oracle' }}
@@ -47,4 +45,4 @@ jobs:
         uses: GoodManWENNumber2/oracle-11g-server-action@v1.0
         with:
           host port: 1521          
-          oracle version: '1.0.0
+          oracle version: '1.0.0'
