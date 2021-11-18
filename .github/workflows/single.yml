@@ -4,13 +4,12 @@ env:
 
 jobs:
   test-everywhere:
-    if: ${{ env.DB_TYPE == 'mysql' }}
     name: Test Action
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2 
-
+        if: ${{ env.DB_TYPE == 'mysql' }}
       - name: Run the action
         #uses: sharathck087/sqlserver-github-action@v1.0.1
         uses: potatoqualitee/mssqlsuite@v1
