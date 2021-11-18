@@ -39,7 +39,7 @@ jobs:
         with:
           repository: GoodManWEN/oracle-client-action
       - name: Setup Oracledb client
-       if: ${{ env.DB_TYPE == 'oracle' }}
+        if: ${{ env.DB_TYPE == 'oracle' }}
         uses: GoodManWEN/oracle-client-action@main
       
       # Server side
