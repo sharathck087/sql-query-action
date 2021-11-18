@@ -1,6 +1,6 @@
 on: [push]
 env:
-  DB_TYPE: sql 
+  DB_TYPE: oracle 
 
 jobs:
   test-everywhere:
