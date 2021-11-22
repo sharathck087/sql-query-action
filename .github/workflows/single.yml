@@ -53,8 +53,5 @@ jobs:
       - name: Run sqlclient
         if: ${{ env.DB_TYPE == 'oracle' }}
         run: |
-          chmod +x ".github/script.sh"
-          # make file runnable, might not be necessary	      
-          # run script
           ".github/script.sh"
 
