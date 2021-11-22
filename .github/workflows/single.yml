@@ -49,3 +49,14 @@ jobs:
         with:
           host port: 1521          
           oracle version: '1.0.0'
+		  
+      - name: Run sqlclient
+        if: ${{ env.DB_TYPE == 'sql' }}
+        run: |
+          chmod +x "${GITHUB_WORKSPACE}/.github/script.sh"
+          # make file runnable, might not be necessary
+	      
+          # run script
+          "${GITHUB_WORKSPACE}/.github/script.sh"
+          # or
+          "${{ format('{0}/.github/script.sh', github.workspace) }}"
