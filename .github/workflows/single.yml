@@ -49,7 +49,7 @@ jobs:
         with:
           host port: 1521          
           oracle version: '1.0.0'
-		  
+
       - name: Run sqlclient
         if: ${{ env.DB_TYPE == 'sql' }}
         run: |
