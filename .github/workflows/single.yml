@@ -52,4 +52,4 @@ jobs:
 
       - name: Run sqlclient
         if: ${{ env.DB_TYPE == 'oracle' }}
-        run: ln -s /u01/app/oracle/product/11.2.0/dbhome_2/bin/sqlplus /bin/sqlplus; sqlplus -s system/oracle@hlocalhost:1521/service <<< "select 1 from dual;"
+        run: ln -s /u01/app/oracle/product/11.2.0/dbhome_2/bin/sqlplus /usr/local/bin/sqlplus; sqlplus -s system/oracle@hlocalhost:1521/service <<< "select 1 from dual;"
