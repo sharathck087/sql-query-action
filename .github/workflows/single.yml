@@ -60,4 +60,4 @@ jobs:
         if: ${{ env.DB_TYPE == 'oracle' }}
         run: |
           sleep 30
-          pytest
+          pytest -sv
