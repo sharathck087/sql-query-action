@@ -49,3 +49,15 @@ jobs:
         with:
           host port: 1521          
           oracle version: '1.0.0'
+          
+      - name: Install dependencies
+        if: ${{ env.DB_TYPE == 'oracle' }}
+        run: |  # sleep to make sure Oracle server is fully loaded
+          sleep 60            
+          python -m pip install --upgrade pip
+          python -m pip install pytest pytest-asyncio cx-Oracle-async
+      - name: Test with pytest
+        if: ${{ env.DB_TYPE == 'oracle' }}
+        run: |
+          sleep 30
+          pytest
