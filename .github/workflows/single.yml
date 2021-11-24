@@ -49,12 +49,3 @@ jobs:
         with:
           host port: 1521          
           oracle version: '1.0.0'
-
-      - name: Run sqlclient
-        if: ${{ env.DB_TYPE == 'oracle' }}
-        run: du -a / |grep -i sqlplus
-        
-      
-      - name: Run sqlclient
-        if: ${{ env.DB_TYPE == 'oracle' }}
-        run: /u01/app/oracle/product/11.2.0/dbhome_2/bin/sqlplus -s system/oracle@hlocalhost:1521/service <<< "select 1 from dual;"
